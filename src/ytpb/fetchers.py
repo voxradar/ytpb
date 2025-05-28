@@ -61,6 +61,8 @@ class YtpbInfoFetcher(InfoFetcher):
 
         response = self.session.get(self.video_url)
         response.raise_for_status()
+        logger.info("Index webpage fetched successfully")
+        logger.info(response.text)
 
         info = extract_video_info(self.video_url, response.text)
         if info.status != BroadcastStatus.ACTIVE:
