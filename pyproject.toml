@@ -9,6 +9,9 @@ readme = "README.rst"
 dynamic = ["version"]
 authors = [ { name = "Maxim Stolyarchuk" } ]
 keywords = [ "youtube" ]
+packages = [
+    { include = "ytpb", from = "src" }
+]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Environment :: Console",
